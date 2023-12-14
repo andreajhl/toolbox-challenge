@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import FileList from '../../../components/fileList';
-import { getFileList } from '../../../store/files';
-import Toast from '../../../components/ui/toast';
-import wordings from '../../../wordings';
-import Loader from '../../../components/ui/loader';
-import Layout from '../../../components/layout';
+import FileList from '../../components/fileList';
+import { getFileList } from '../../store/files';
+import Toast from '../../components/ui/toast';
+import wordings from '../../wordings';
+import Loader from '../../components/ui/loader';
+import Layout from '../../components/layout';
 
 const Home = () => {
   const { alerts: { error }, loading } = wordings;
