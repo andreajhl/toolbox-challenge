@@ -68,9 +68,10 @@ client/
 
 #### Cómo Probar
 
+* Primero asegurate de tener el servidor levantado (encontraras las instrucciones en el <a href="../api/README.md">README</a> de api)
 * Accede a la carpeta de la aplicacion ejecutando el siguiente comando: ```cd client```.
 * En la terminal del proyecto, ejecuta el siguiente comando para instalar las dependencias: ```npm install```.
-* Una vez finalizada la instalación, inicia el proyecto con el siguiente comando: ```npm run start```.
+* Una vez finalizada la instalación, inicia el proyecto con el siguiente comando: ```npm run dev```.
 * Si deseas ejecutar las pruebas, utiliza: ```npm run test```
 <br>
 

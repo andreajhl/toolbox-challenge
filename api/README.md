@@ -180,7 +180,6 @@ api/
                   <table>
                   <caption>
                     Objeto
-                    <hr/>
                   </caption>
                     <tr>
                       <td>file</td>
@@ -192,7 +191,6 @@ api/
                         <table>
                           <caption>
                             Array
-                            <hr/>
                           </caption>
                           <tr>
                             <td>object</td>
