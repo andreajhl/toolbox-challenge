@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# FRONT END
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  Esta aplicación se desarrollo utilizando React v18, Redux Toolkit y Javascript, los componentes y funciones se encuentran testeados con Jest y la aplicacion es responsiva, su estructura se organiza por funcionalidad.
 
-## Available Scripts
 
-In the project directory, you can run:
+<details>
+<summary>Estructura de Carpetas</summary>
 
-### `npm start`
+```bash 
+client/
+│
+├── src/
+│ ├── components/
+│ │ ├── fileList/
+│ │ │ ├── index.jsx
+│ │ │ └── index.spec.jsx
+│ │ ├── layout/...
+│ │ ├── navbar/...
+│ │ └── ui/
+| |   ├── loader/
+| |   | ├── index.jsx
+| |   | └── index.spec.jsx
+│ │   ├── select/...
+│ │   ├── table/...
+│ │   └── toast/...
+| |
+│ ├── constants/
+│ │ ├── server.js
+│ │ └── ...
+│ │
+│ ├── helper/
+| | ├── httpsClient/
+│ │ │ ├── index.js
+│ │ │ └── index.spec.js
+| | └── LogErros/...
+| |
+│ ├── mocks/
+| | └── store/
+│ |   └── index.js
+| |
+│ ├── services/
+│ | └── index.js
+| |
+| ├── store/
+│ | ├── index.js
+│ | └── files/
+│ │   ├── fileSlice.js
+│ │   ├── thunk.js
+│ │   └── index.js
+| |
+| ├── views/
+│ | └── home/
+│ │   └── index.jsx
+| |
+| └── wordings/
+│   └── index.js
+|
+├── App.js
+├── index.js
+├── package.json
+├── README.md
+└── ...
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+#### Cómo Probar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Accede a la carpeta de la aplicacion ejecutando el siguiente comando: ```cd client```.
+* En la terminal del proyecto, ejecuta el siguiente comando para instalar las dependencias: ```npm install```.
+* Una vez finalizada la instalación, inicia el proyecto con el siguiente comando: ```npm run start```.
+* Si deseas ejecutar las pruebas, utiliza: ```npm run test```
+<br>
 
-### `npm run build`
+### Pantalla y Opciones
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La página de inicio cuenta con un listado de archivos organizados mediante una tabla, cuenta con un selector para filtrar que renderiza el listado de archivos existentes en la base de datos (algunos de estos pueden estar dañados o no contener informacion).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En caso de que la opcion selecionada contenga un error, se mostrara una alerta para informarle, si desea volver a todas las opciones solo seleccional 'ALL'
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="public/assets/toolbox.png" width="800" height="400" />
+<br>
+<br>
