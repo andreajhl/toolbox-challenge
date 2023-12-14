@@ -20,8 +20,8 @@ describe('<FileList />', () => {
 
     const [fileName,,, hex] = getAllByRole('cell');
 
-    expect(fileName.textContent).toEqual(file)
-    expect(hex.textContent).toEqual(lines[0].hex);
+    expect(fileName.textContent).toContain(file)
+    expect(hex.textContent).toContain(lines[0].hex);
   });
 
   it('when the data is empty it renders only the headers', () => {

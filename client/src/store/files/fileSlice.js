@@ -25,7 +25,7 @@ export const fileSlice = createSlice({
         state.files = action.payload;
       })
       .addCase(getFileByName.fulfilled, (state, action) => {
-        state.fileItem = action.payload;
+        state.fileItem = action.payload || {};
       })
       .addMatcher(
         (action) => action.type.endsWith('/pending'),
@@ -42,7 +42,7 @@ export const fileSlice = createSlice({
         },
       )
       .addMatcher(
-        (action) => action.type.endsWith('/succeeded'),
+        (action) => action.type.endsWith('/fulfilled'),
         (state) => {
           state.isLoading = false;
         },

@@ -10,9 +10,9 @@ const wordings = {
   },
   alerts: {
     error: {
-      title: 'Upss! Ocurrio un error',
-      content: 'No conseguimos informacion sobre este file'
-    }
+      title: 'Ocurrio un error',
+      content: 'No se puedo encontrar informacion de este file'
+    },
   },
   loading: 'Loading',
 };

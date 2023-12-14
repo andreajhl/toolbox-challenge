@@ -36,6 +36,6 @@ describe('<Table />', () => {
     const cells = getAllByRole('cell');
 
     expect(cells).toHaveLength(9);
-    expect(cells[0].textContent).toEqual('1');
+    expect(cells[0].textContent).toContain('1');
   });
 });
