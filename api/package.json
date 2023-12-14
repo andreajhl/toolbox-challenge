@@ -1,0 +1,31 @@
+{
+  "name": "toolbox-api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "nyc --nycrc-path=.nycrc mocha src/test/** --exit",
+    "lint": "eslint . --ext js --report-unused-disable-directives --max-warnings 0"
+  },
+  "keywords": [],
+  "author": "Andrea Hernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.6.2",
+    "axios-mock-adapter": "^1.22.0",
+    "chai": "^4.3.10",
+    "eslint": "^8.55.0",
+    "eslint-plugin-mocha": "^10.2.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "chai-http": "^4.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

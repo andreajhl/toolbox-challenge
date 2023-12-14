@@ -1,0 +1,22 @@
+{
+  "nyc": {
+    "check-coverage": true,
+    "report-dir": "coverage",
+    "all": true,
+    "reporter": [
+      "html",
+      "text",
+      "text-summary"
+    ],
+    "extension": [
+      ".js",
+      ".jsx"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/test/**/*.js"
+    ]
+  }
+}
