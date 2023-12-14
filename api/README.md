@@ -51,7 +51,7 @@ api/
 
 * Accede a la carpeta de la aplicacion ejecutando el siguiente comando: ```cd api```.
 * En la terminal del proyecto, ejecuta el siguiente comando para instalar las dependencias: ```npm install```.
-* Una vez finalizada la instalación, inicia el proyecto con el siguiente comando: ```npm run dev```.
+* Una vez finalizada la instalación, inicia el proyecto con el siguiente comando: ```npm run start```.
 * Si deseas ejecutar las pruebas, utiliza: ```npm run test```
 <br>
 
