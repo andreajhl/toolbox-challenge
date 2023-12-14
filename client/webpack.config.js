@@ -1,11 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
     publicPath: "/",
   },
   resolve: {
@@ -33,8 +36,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename:'index.html'
-    })
+    }),
+    new CleanWebpackPlugin(),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
