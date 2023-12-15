@@ -1,7 +1,26 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const rulesForStyles = {
+  test: /\.css$/,
+  use: [
+    "style-loader",
+    "css-loader",
+  ],
+};
+
+const rulesForJavascript = {
+  test: /\.(js|jsx)$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: [
+        ['@babel/preset-react']
+      ]
+    }
+  },
+};
 
 module.exports = {
   entry: './src/index.js',
@@ -16,20 +35,8 @@ module.exports = {
   },  
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-        ],
-      },
+      rulesForJavascript,
+      rulesForStyles
     ],
   },
   plugins: [
@@ -37,14 +44,11 @@ module.exports = {
       template: './public/index.html',
       filename:'index.html'
     }),
-    new CleanWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
       chunks: 'all',
     },
-    minimize: true,
-    minimizer: [new TerserPlugin()],
   },
   devServer: {
     static: path.join(__dirname, 'dist'),
