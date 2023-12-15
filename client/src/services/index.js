@@ -10,6 +10,7 @@ const getFileNameListService = async() => {
     return await httpClient.get(path);
   } catch (error) {
     logErrors(error, LOG_MESSAGE);
+    throw error;
   };
 };
 
@@ -37,6 +38,7 @@ const getFileListService = async() => {
     return await httpClient.get(path);
   } catch (error) {
     logErrors(error, LOG_MESSAGE);
+    throw error;
   };
 };
 

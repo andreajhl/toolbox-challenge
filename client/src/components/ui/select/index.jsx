@@ -15,7 +15,7 @@ const Select = ({
         onChange={handleChange}
       >
         {
-          optionsSelect.map(item => (
+          optionsSelect?.map(item => (
             <option key={item} value={item}>{item}</option>
           ))
         }
